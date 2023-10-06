@@ -1,0 +1,160 @@
+/* childrens-tumor-foundation */
+/* Find an event */
+.grid-container-master .grid-container-classypress {
+    background: white;
+    text-align: left;
+    padding: 0;
+    max-width: 47%;
+    display: grid; 
+    grid-template-columns: 1fr 0.8fr 1.2fr; 
+    grid-template-rows:0.5fr 0.1fr 0.3fr 0.1fr 1fr; 
+    gap: 0px 12px;
+    grid-template-areas: 
+    "grid-img grid-headline grid-headline"
+    "grid-img grid-date grid-date"
+    "grid-img grid-progressbar grid-progressbar"
+    "grid-img grid-raised grid-raised"
+    "grid-img grid-btn1 grid-btn2"; 
+}
+
+.grid-container-classypress .grid-img{
+    background: #e9e9e9;
+    grid-area: grid-img;
+
+    grid-column: 1 / span 1;
+    /*grid-row: 1 / span 3;*/
+    min-width: unset !important;
+    max-height: unset !important;
+    width: 200px;
+    height: 100%;
+}
+
+.grid-container-classypress .grid-img img {
+ width: 100%;
+    height: 100%;
+     object-fit: contain;
+}
+
+.grid-container-classypress > h2, .grid-container-classypress > span, 
+.grid-container-classypress > a, .grid-container-classypress > div{
+    grid-column: 2 / span 1;
+    grid-row: auto;
+    padding-left: 0;
+}
+
+.grid-container-classypress .headline{order: 1; grid-area: grid-headline;}
+.grid-container-classypress .date{order: 2; color: #504d4d; grid-area: grid-date; }
+.grid-container-classypress .grid-bottom{order: 4; grid-area: grid-raised;}
+.grid-container-classypress .mittun-grid-line{order: 5; grid-area: grid-btn1;  padding-left: 0;}
+.grid-container-classypress .mittun-grid-line:last-child{order: 6; grid-area: grid-btn2;}
+.grid-container-classypress .mittun-progress-wrapper{order: 3; grid-area: grid-progressbar;}
+
+.grid-container-classypress .headline a{
+    font-size: 22px;
+    font-weight: 500 !important;
+    color: black;
+}
+
+.grid-container-classypress .grid-bottom .grid-raise{
+    display: flex;
+    padding: 0;
+    max-width: 100%;
+    text-align: left;
+}
+
+.grid-container-classypress .grid-bottom h5 {
+    font-size: 14px;
+}
+
+.grid-container-classypress .grid-bottom span {
+    font-size: 14px;
+    line-height: 21px;
+    margin-left: 6px;
+}
+
+
+.grid-container-classypress .mittun-campaign-link{
+    padding:0;
+}
+
+.style_1.grid-container-classypress .mittun-progress-wrapper .mittun-thermometer{
+    margin: 0px 0;
+    margin-top: 15px;
+}
+.style_1 .mittun-thermometer{
+    background: #F5F5F5;
+}
+.style_1.grid-container-classypress .mittun-thermometer-progress-marker {
+       display: none;
+}
+
+.grid-container-classypress .mittun-campaign-link.mittun-register-link a {
+    background: transparent;
+    color: #00629b;
+    border: 1px solid;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 14px;
+    width: 135px;
+}
+
+.grid-container-classypress .mittun-campaign-link.mittun-donate-link a {
+    background: #00a3e0;
+    color: white;
+    border: 1px solid;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 14px;
+    width: 135px;
+}
+
+.mittun-grid-line .mittun-campaign-link.mittun-donate-link {
+    margin-top: 15px;
+}
+
+.mittun-grid-line .mittun-campaign-link.mittun-register-link {
+    margin-top: 15px;
+}
+
+@media only screen and (max-width: 767px){
+    /* Find an event */
+    .grid-container-master .grid-container-classypress {
+        max-width: 100%;
+      display: flex;
+      flex-flow: wrap;
+    }
+
+    .grid-container-classypress .grid-img{
+        height: 170px;
+        width: 100%;
+    }
+
+    .grid-container-classypress > h2.headline, .grid-container-classypress > span, 
+    .grid-container-classypress > a, .grid-container-classypress > div{
+        width: 100%;
+        padding-left: 15px;
+    }
+
+    .grid-container-classypress .mittun-grid-line{ width: 140px;  padding-left: 15px;}
+    .grid-container-classypress .mittun-grid-line:last-child{  width: 140px;}
+    .grid-container-classypress .mittun-progress-wrapper{width: 100%;  padding-left: 15px;}
+    
+    .leaderboard-container-classypress .mittun-thermometer, .event-container-classypress .mittun-thermometer{
+        clear: unset;
+    }
+    .leaderboard-element > div.leaderboardImg img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50px;
+    }
+    
+    .grid-container-master .grid-container-classypress{
+        max-width: 100%;
+    }
+
+
+}
+
+@media only screen and (max-width: 1024px){
+    .grid-container-master .grid-container-classypress{    max-width: 70%;}
+}
